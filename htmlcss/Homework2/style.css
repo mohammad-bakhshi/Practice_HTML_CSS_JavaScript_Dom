@@ -1,0 +1,41 @@
+
+body{
+    max-width: 800px;
+    margin: auto;
+}
+
+.header_container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.subheading_container{
+    display: flex;
+    padding: 5px;
+}
+
+.body_container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(128, 128, 128, 0.267);
+    padding: 50px;
+}
+ul{
+    list-style-type: none;
+    justify-content: space-between;
+}
+
+li{
+    display: inline;
+}
+
+button{
+    background-color: #1c940c;
+    color: white;
+    font-size: medium;
+    padding: 15px;
+    border-radius: 5px;
+    border: none;
+}

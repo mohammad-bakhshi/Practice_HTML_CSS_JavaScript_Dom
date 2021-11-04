@@ -1,0 +1,83 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+}
+
+#first{
+    background-color: #37495f;
+}
+
+#second{
+    background-color: #65c271;
+}
+
+#third{
+background-color: #da604b;
+}
+
+#fourth{
+    background-color: #c76026;
+}
+
+#fifth{
+    background-color: #9166b5;
+}
+
+.dot {
+    height: 25px;
+    width: 25px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+    border: 5px white solid;
+  }
+
+  .firstdot
+  {
+    background-color: #37495f;
+  }
+  .seconddot
+  {
+    background-color: #65c271;
+  }
+  .thirddot{
+    background-color: #da604b;
+  }
+  .fourthdot{
+    background-color: #c76026;
+  }
+  .fifthdot{
+    background-color: #9166b5;
+  }
+.button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-large;
+    border: 1px white solid;
+    height: 50px;
+    width: 300px;
+}
+
+.button:hover{
+    background-color: white;
+    color: #37495f;
+    cursor: pointer;
+}
+
+.content{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 100px;
+}
+
+p{
+    color:white
+}

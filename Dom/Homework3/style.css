@@ -1,0 +1,26 @@
+div{
+    background-color: #00ff00;
+}
+
+.parent{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 800px;
+    height: 400px;
+    border: 1px solid black;
+}
+
+.target{
+    width: 600px;
+    height: 200px;
+    border: 1px solid black;
+    margin-left: 20px;
+}
+
+.child{
+    width: 400px;
+    height: 100px;
+    border: 1px solid black;
+    margin-left: 20px;
+}

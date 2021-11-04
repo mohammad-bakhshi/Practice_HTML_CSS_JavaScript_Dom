@@ -1,0 +1,37 @@
+body{
+    background-color: #6867ed;
+}
+
+.sidebar{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 500px;
+    justify-content: space-between;
+}
+
+.link{
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.link:hover{
+    background-color: aqua;
+    cursor: pointer;
+}
+
+i{
+    padding: 5px;
+}
+
+.links{
+    display: flex;
+    flex-direction: column;
+    justify-items: start;
+}
+
+.home{
+    background-color: aqua;
+    cursor: pointer;
+}

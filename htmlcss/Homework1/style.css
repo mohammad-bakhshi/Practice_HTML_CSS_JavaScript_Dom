@@ -1,0 +1,52 @@
+.green{
+    background-color:#baffc9;
+    height: 100px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.container{
+    display: flex;
+    justify-content:space-between;
+
+}
+
+.yellow{
+    background-color: #ffffba;
+    height: 450px;
+    width: 200px;
+    padding: 20px;
+}
+
+.blue{
+    background-color: #bae1ff;
+    height: 200px;
+    width: 200px;
+    padding: 20px;
+}
+
+.red{
+    background-color: #ffb3ba;
+    height: 450px;
+    width: 200px;
+    padding: 20px;
+}
+
+.orange{
+    background-color: #ffdfba;
+    height: 200px;
+    width: 200px;
+    padding: 20px;
+}
+
+.blue_orange{
+    display: flex;
+    flex-direction:column;
+justify-content: space-between;
+}
+
+input{
+    border: none;
+    padding: 15px;
+    margin: 10px;
+}
