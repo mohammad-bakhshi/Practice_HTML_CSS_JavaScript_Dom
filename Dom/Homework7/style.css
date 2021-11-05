@@ -1,0 +1,176 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,600);
+
+/* ---------------------------------------------- */
+/* -------   Required CSS (customizable)  ------- */
+/* ---------------------------------------------- */
+
+:root {
+  --color__accent: #6200ee;
+
+  --field__background: #f5f5f5;
+  --field__background--hover: #e9e9e9;
+  --input__border: rgba(0, 0, 0, 0.42);
+  --input__border--hover: rgba(0, 0, 0, 0.62);
+  --label__color: #222;
+
+  --font__size: 16px;
+  --font__family: Roboto, Arial, sans-serif;
+}
+
+.floating {
+  margin-bottom: 2rem;
+  background-color: var(--field__background);
+  transition: background-color 0.2s ease;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+.floating:hover,
+.floating:focus-within {
+  background-color: var(--field__background--hover);
+}
+
+.floating__input {
+  padding: 1.8rem 1rem 0.6rem;
+  font-size: 1rem;
+  border-bottom: 0.1rem solid var(--input__border);
+  transition: border-color 0.2s ease;
+  caret-color: var(--color__accent);
+}
+
+.floating:hover .floating__input {
+  border-color: var(--input__border--hover);
+}
+
+.floating__input::placeholder {
+  color: rgba(0, 0, 0, 0);
+}
+
+.floating__label {
+  display: block;
+  position: relative;
+  max-height: 0;
+  font-weight: 500;
+  pointer-events: none;
+  margin-right: 30px;
+}
+
+.floating__label::before {
+  color: var(--label__color);
+  content: attr(data-content);
+  display: inline-block;
+  filter: blur(0);
+  backface-visibility: hidden;
+  transform-origin: left top;
+  transition: transform 0.2s ease;
+  left: 1rem;
+  position: relative;
+}
+
+.floating__label::after {
+  bottom: 1rem;
+  content: "";
+  height: 0.1rem;
+  position: absolute;
+  transition: transform 180ms cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 180ms cubic-bezier(0.4, 0, 0.2, 1), background-color 0.3s ease;
+  opacity: 0;
+  left: 0;
+  top: 100%;
+  margin-top: -0.1rem;
+  transform: scale3d(0, 1, 1);
+  width: 100%;
+  background-color: var(--color__accent);
+}
+
+.floating__input:focus + .floating__label::after {
+  transform: scale3d(1, 1, 1);
+  opacity: 1;
+}
+
+.floating__input:placeholder-shown + .floating__label::before {
+  transform: translate3d(0, -2.2rem, 0) scale3d(1, 1, 1);
+}
+
+.floating__label::before,
+.floating__input:focus + .floating__label::before {
+  transform: translate3d(0, -3.12rem, 0) scale3d(0.82, 0.82, 1);
+}
+
+.floating__input:focus + .floating__label::before {
+  color: var(--color__accent);
+}
+
+/* ---------------------------------------------- */
+/* --  Codepen styles & resets - not required  -- */
+/* ---------------------------------------------- */
+
+body {
+  display: flex;
+  align-items: center;
+  padding: 1rem 3rem;
+  max-width: 40rem;
+  margin: 0 auto;
+  font-family: var(--font__family);
+  font-size: var(--font__size);
+  font-weight: 400;
+  min-height: 100vh;
+}
+
+input {
+  background: none;
+  border-width: 0;
+  display: block;
+  width: 100%;
+}
+
+fieldset {
+  padding: 3rem 2rem 1.5rem;
+}
+
+legend {
+  padding: 0 0.5rem;
+}
+
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+  background: #904e95;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+.hidden--visually {
+  border: 0;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.button {
+  background: var(--color__accent);
+  border-width: 0;
+  color: #fff;
+  display: block;
+  width: 100%;
+  padding: 1rem 2rem;
+  font-weight: 600;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.form {
+  background-color: #fff;
+  padding: 2rem 3rem 4rem;
+  box-shadow: 2px 2px 16px 3px rgba(0, 0, 0, 0.4);
+}
